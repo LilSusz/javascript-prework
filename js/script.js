@@ -8,19 +8,26 @@
 const buttonRock = document.getElementById('button-rock');
 const buttonPaper = document.getElementById('button-paper');
 const buttonScissors = document.getElementById('button-scissors');
-
+// assign the element to the appropriate button variable
 
 function buttonClicked(argButtonName) {
   clearMessages();
   console.log(argButtonName + ' został kliknięty');
-
-  playerMove = argButtonName;
-  console.log('ruch gracza to: ' + playerMove);
-  randomNumber = Math.floor(Math.random() * 3 + 1);
+  
+  const randomNumber = Math.floor(Math.random() * 3 + 1);
   console.log('wylosowana liczba to: ' + randomNumber);
-  computerMove = getMoveName(randomNumber);
+  // draw a number, recalculate it and display it
+
+  const playerMove = argButtonName;
+  console.log('ruch gracza to: ' + playerMove);
+  // get the player's move and display it
+
+  const computerMove = getMoveName(randomNumber);
   console.log('ruch komputera to: ' + computerMove);
+  // get the computer's move and display it
+
   displayResult(playerMove, computerMove);
+  //recalculate and display the result
 
   function getMoveName(argMoveId) {
     console.log('wywołano funkcję getMoveName z argumentem: ' + argMoveId);
@@ -36,9 +43,6 @@ function buttonClicked(argButtonName) {
     }
   }
   
-  /**
-   * Describe this function...
-   */
   function displayResult(argPlayerMove, argComputerMove) {
     console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
     if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {

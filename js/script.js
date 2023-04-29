@@ -61,10 +61,12 @@ function buttonClicked(argButtonName) {
     
 }
 
-/**
- * Describe this function...
- */
-
-buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
-buttonPaper.addEventListener('click', function(){ buttonClicked('papier'); });
-buttonScissors.addEventListener('click', function(){ buttonClicked('nożyce'); });
+buttonRock.addEventListener('click', function(){ 
+  buttonClicked('kamień'); 
+});
+buttonPaper.addEventListener('click', function(){ 
+  buttonClicked('papier'); 
+});
+buttonScissors.addEventListener('click', function(){ 
+  buttonClicked('nożyce'); 
+});
